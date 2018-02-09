@@ -1,4 +1,4 @@
-<table class="table table-stripped">
+<table class="table table-striped">
     <tr>
         <th>Rating</th>
         <th>Game</th>
@@ -8,11 +8,11 @@
         <th>EndTime</th>
     </tr>
     <tr ng-repeat="rating in ratings">
-        <th>{{rating.Rating}}</th>
-        <th>{{rating.Game}}</th>
-        <th>{{rating.RatingDelta}}</th>
-        <th>{{rating.IsWin}}</th>
-        <th>{{rating.CreationTimeFormat}}</th>
-        <th>{{rating.EndTimeFormat}}</th>
+        <td>{{rating.Rating}}</td>
+        <td>{{rating.Game}}</td>
+        <td>{{rating.RatingDelta}}</td>
+        <td>{{rating.IsWin}}</td>
+        <td>{{rating.CreationTimeFormat}}</td>
+        <td>{{rating.EndTimeFormat}}</td>
     </tr>
 </table>
