@@ -1,0 +1,1 @@
+var gamesWithRatingApp = angular.module('gamesWithRatingApp',['angularMoment']);
