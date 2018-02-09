@@ -12,7 +12,7 @@
         <td>{{rating.Game}}</td>
         <td>{{rating.RatingDelta}}</td>
         <td>{{rating.IsWin}}</td>
-        <td>{{rating.CreationTimeFormat}}</td>
-        <td>{{rating.EndTimeFormat}}</td>
+        <td>{{rating.CreationTime | dateFilter}}</td>
+        <td>{{rating.EndTime | dateFilter}}</td>
     </tr>
 </table>
