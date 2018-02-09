@@ -37,10 +37,12 @@ gamesWithRatingApp.controller('GamesCtrl',function ($scope, GamesService) {
     var promiseObj = GamesService.getData();
     promiseObj.then(function(jsonData) {
         $scope.ratings=jsonData;
-        for(let i=0; i<$scope.ratings.length;i++) {
-            $scope.ratings[i].CreationTimeFormat = moment($scope.ratings[i].CreationTime).format("DD/MM/YYYY")
-            $scope.ratings[i].EndTimeFormat = moment($scope.ratings[i].EndTime).format("DD/MM/YYYY")
-        }
     });
 
 });
+
+gamesWithRatingApp.filter('dateFilter', function() {
+    return function(text) {
+        return moment(text).format("DD/MM/YYYY");
+    }
+})
