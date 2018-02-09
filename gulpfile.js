@@ -1,12 +1,5 @@
 var gulp = require('gulp'),
-    browsersync = require('browser-sync'),
-    stylus = require('gulp-stylus');
-
-gulp.task('stylus', function () {
-    gulp.src('app/stylus/*.styl')
-        .pipe(stylus())
-        .pipe(gulp.dest('app'));
-});
+    browsersync = require('browser-sync');
 
 gulp.task('browsersync', function() {
     browsersync({
@@ -16,8 +9,7 @@ gulp.task('browsersync', function() {
     });
 });
 
-gulp.task('watch', ['browsersync', 'stylus'], function() {
-    gulp.watch('app/stylus/*.styl', ['stylus']);
+gulp.task('watch', ['browsersync'], function() {
     gulp.watch('app/*.html', browsersync.reload);
     gulp.watch('app/*.css', browsersync.reload);
     gulp.watch('app/*.js', browsersync.reload);
